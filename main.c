@@ -1,8 +1,13 @@
 #include <stdio.h>
 
 
+#define ASDF	3.14
+
+
 void main( void )
 {
-	printf( "Hello World\n" );
-	return 0;
+	int x = 0;
+	printf( "Hello World %d\n", x );
+
+	return 1;
 }
