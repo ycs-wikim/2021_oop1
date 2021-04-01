@@ -4,8 +4,77 @@
 #include <iostream>
 using namespace std;
 
+/// 예제 4-3의 매크로
+/// 매크로는 단순 치환 동작만 수행
+/// 유명한 질문? --> 임시 변수 없이 변수의 값을 바꿀 수 있는 방법?
+/// 답: 서로 XOR를 3번하면 바뀐다.
+#define SWAP(a,b)	{ a ^= b; b ^= a; a ^= b; }
+
+/// 예제 4-5 함수
+int Add(int a, int b)
+{
+	return a + b;
+}
+
+
 int main()
 {
+	/// 반복문
+	int i = 0;
+
+	for (i = 10; i < 15; i += 4)
+	{
+		printf("i : %d\n", i);
+	}
+	printf("result: %d\n", i);
+
+
+/* switch case~
+	int a, b;
+
+	switch (Add(1, 2))
+	{
+	case 3:
+	case 0:
+	case 1:
+	case 2:
+		a = 3;
+		b = 7;
+		if (1)
+			cout << Add(a, b) << endl;
+		break;
+	case 4:
+		a = 30;
+		b = 70;
+		if (1)
+			cout << Add(a, b) << endl;
+		break;
+	default:
+		cout << "Hello world" << endl;
+		break;
+	}
+
+
+	/*
+/// 140페이지 예제 4-3
+	int a = 0;
+	int b = 1;
+
+	/// if 안의 값 --> 0 :: 조건식에 0이면 --> 항상 거짓
+	if (0)
+	{
+		SWAP(a, b);
+	}
+	
+/*
+		a ^= b;
+	/// endif
+	b ^= a;
+	a ^= b;
+	
+	cout << a << " " << b << endl;
+
+/* if문 기본 구조
 	int a = 15;
 	/// if문 예제
 	if (a > 5)
