@@ -6,6 +6,55 @@ using namespace std;
 
 int main()
 {
+	int a = 15;
+	/// if문 예제
+	if (a > 5)
+	{
+		printf("3 > 5\n");
+
+		printf("really?\n");
+	}
+	else
+		printf("3 < 5\n");
+
+		printf("YES\n");
+
+/* 형변환
+	int a = 165;
+	char c = 0;
+	float f = 0.0;
+	bool t = false;
+
+	printf("%d\n", sizeof(int));
+	printf("%d\n", sizeof(float));
+
+	/// 묵시적 형변환 -> 하지 말것!!!
+	c = a;		/// 경고가 없음.	:: 1 = 4; (메모리 구조 자체는 동일)
+	//f = a;		/// 경고가 있음.	:: 4 = 4; (메모리 구조가 다름)
+	/// 명시적 형변환
+	f = (float)a;
+
+	printf("%d %c\n", c, c);
+
+	/// 타입(형) 변환 연산자
+	printf("%d\n", 5 / 2);		/// --> 2.5 --> 2 --> 0.5? --> 버린다. --> 정보 손실
+
+
+/* sizeof 
+	int a = 0;
+	int b[ 5 ] = { 1, 2, 3, };
+
+	/// sizeof( ) ==> 메모리에 할당된 실제 크기를 반환
+	printf("sizeof(int) : %d\n", sizeof(int));
+	printf("sizeof(a) : %d\n", sizeof(a));
+	printf("sizeof(b) : %d\n", sizeof(b));
+/*
+	int a = 5;
+
+	/// 삼항 연산자 : ( 조건식 ) ? 참인경우 실행할 문장 : 거짓인 경우 실행할 문장;
+	(a > 3) ? printf("a > 3\n") : printf("a !!! 3\n");
+
+/*
 	cout << ~0 << endl;		/// 비트 반전의 NOT
 	cout << !0 << endl;		/// 논리 연산의 NOT
 /*
