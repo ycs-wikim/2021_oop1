@@ -8,6 +8,24 @@ using namespace std;
 
 int main()
 {
+	int a = 3;
+	int *p = &a;
+
+	printf("a: %d %p\n", a, &a);
+	printf("p: %d %p %p\n", *p, p, &p);
+
+
+	/*
+	int *ptr = nullptr;
+	
+
+	ptr = (int*)malloc(sizeof(int));
+	*ptr = 5;
+
+	printf("%d 0x%p\n", a, &a);		/// *a
+	printf("0x%p 0x%p %d\n", ptr, &ptr,*ptr );
+	*/
+/*
 	int i = 0;
 	int j = 0;
 	/// 별찍기
@@ -33,6 +51,7 @@ int main()
 		}
 		cout << endl;
 	}
+*/
 /*
 	지금 출력해야 하는 별 모양
 	    *
