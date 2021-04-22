@@ -3,9 +3,54 @@
 
 #include <iostream>
 
+void fff(int a[3])
+{
+	a[0] = 99;
+	a[1] = 199;
+	a[2] = 399;
+}
+
 void fun(int &b)
 {
+	int a[3] = { 1, 2, 3 };
+	fff(a);
+	printf("%d %d %d\n", *a, *(a + 1), *(a + 2));
+	/*
+	int a[3][5] = { {1, 2, 3, 4, 5}, { 11, 22, 33, 44, 55}, { 66, 77, 88, 99, 100} };
+	int *p = (int*)a;
+	int i = 0;
+
+	for (i = 0; i < 15; i++)
+		printf("%d\t", *(p + i));
+
+
+	/*
+	char str1[] = { 'C', '+', '+' };		/// sizeof( str1 ) -> 
+	char str2[] = "C++";
+	char str3[] = { "C++" };
+
+	printf("%d %s\n", sizeof(str1), str1);
+	printf("%d %s\n", sizeof(str2), str2);
+	printf("%d %s\n", sizeof(str3), str3);
+	/*
+	int a[8] = {};		/// 모든 요소가 0으로 초기화
+	int a[8] = { 1, 2 };	/// 1,2,0,0,0,0,0,0
+	int a[8] = { 1, };		/// 1,0,0,0,0,0,0,0
+	int a[8] = { 0 };		/// 모든 요소가 0으로 초기화
+	int a[8];				/// 모든 요소가 쓰레기 값으로 초기화
+	/*
+	int i = 0;
+	int a[2] = { 0, 1 };
+	int b[2] = { a[0], };
+	int c[2] = { 1, 2 };
+	int *p = &c;
+	int *p = a;
+
+	p = &i;
+	a = &i;
+	/// *( b + 0 ) = a;
 	b = 35;
+	*/
 }
 
 void function()
