@@ -15,6 +15,7 @@ class CTest
 	const double m_CD = 2.2;
 	static double s_D;
 	static const double s_CD;
+
 };
 
 int CTest::s_I = 3;
