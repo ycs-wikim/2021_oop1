@@ -1,2 +1,3 @@
 ﻿  05_27_ex.cpp
+d:\2021_wikim\2021_oop1\05_27_ex\05_27_ex\05_27_ex.cpp(43): warning C4269: 'ct': 컴파일러에서 생성한 기본 생성자를 사용하여 초기화된 'const' 자동 데이터는 신뢰할 수 없는 결과를 생성합니다.
   05_27_ex.vcxproj -> D:\2021_wikim\2021_oop1\05_27_ex\Debug\05_27_ex.exe

@@ -4,18 +4,127 @@
 #include <iostream>
 using namespace std;
 
+struct ABCC
+{
+	int			x;
+	int			y;
+};
+
+
+/// 9-14
 class CTest
 {
-	int m_I = 1;
-	const int m_CI = 2;
-	static int s_I;
-	static const int s_CI = 4;
+public:
+	void Func1() const
+	{
 
-	double m_D = 11.1;
-	const double m_CD = 2.2;
-	static double s_D;
-	static const double s_CD;
+	}
 
+	void Func2() const;
+
+	int m_value;
+	int m_VV;
+};
+
+void CTest::Func2() const
+{
+	int x = 3;
+	x = 5;
+	x = x + 100;
+	printf("X:%d MM: %d\n", x, m_value);
+
+	/// 멤버 함수를 상수화 : 멤버 변수의 수정을 방지하는 기능
+	//m_value = 3;
+}
+
+
+int main()
+{
+	const CTest ct;
+	ct.Func1();
+	ct.Func2();
+
+	CTest t;
+	t.Func1();
+	t.Func2();
+
+
+	printf("%d - %d \n", sizeof(ABCC), sizeof(CTest));
+	return 0;
+}
+
+
+
+/*
+class CTest
+{
+public:
+	int m_value;
+
+	void Func()
+	{
+		cout << m_value << endl;
+	}
+
+	static void SFunc()
+	{
+		/// 비정적 멤버는 정적 멤버 함수에서 접근이 불가능!!!
+		//cout << m_value << endl;
+	}
+};
+
+
+
+class ABC
+{
+private:
+	int				m_z;
+public:
+	int				m_x;
+	void function()
+	{
+		/// this : 자기 자신(객체/인스턴스)를 가리키는 포인터
+		/// 아름다운 코드
+	}
+
+	void ptr()
+	{
+		//printf("%p\n", function);
+	}
+};
+
+void fucntion()
+{
+
+}
+
+
+int main()
+{
+	ABC a;
+	printf("NF : %p\n", fucntion);
+	printf("CF: %p\n", &ABC::function);
+	printf("A: %p\n", &a.m_x);
+
+	printf("%d\n", sizeof(a));
+	printf("%d\n", sizeof(ABC));
+}
+
+
+
+
+/*
+class CTest
+{
+	int m_I = 1;					/// 일반 멤버 : 선언 즉시 초기화 가능
+	const int m_CI = 2;				/// const 멤버 : 선언 즉시 초기화 가능
+	static int s_I;					/// static 멤버 : 클래스 내부에서 초기화가 불가능!
+	static const int s_CI = 4;		/// static & const 멤버 : 클래스 내부에서 초기화
+
+	double m_D = 11.1;				/// 일반 멤버
+	const double m_CD = 2.2;		/// const 멤버
+	static double s_D;				/// static 멤버 : 클래스 외부에서 초기화
+	static const double s_CD;		/// static & const 멤버 : 클래스 외부에서 초기화
 };
 
 int CTest::s_I = 3;
@@ -61,7 +170,7 @@ public:
 	{
 		cout << "내가 만든 인수 받는 첫 소멸자~" << endl;
 	}
-	*/
+	* /
 };
 
 int main()
@@ -75,7 +184,7 @@ int main()
 
 
 
-/*
+/ *
 class CTest
 {
 public:
